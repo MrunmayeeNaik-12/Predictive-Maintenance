@@ -1,0 +1,82 @@
+<html>
+<head>
+    <title>
+        Fracture Analysis
+    </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        p{
+            display: inline;
+        }
+        body{
+             background-image: url('/static/img.jpeg');
+
+        }
+        .card {
+            margin-right: auto;
+            margin-left: auto;
+            width: 250px;
+            box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+            height: 300px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0);
+            padding: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    <form class='grid' action="/result" method="post">
+    <br><br>
+    <div class="container mt-5" action="/result" method="Post">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card" style="z-index: 1; left: 66px; top: -20px; position: absolute; height: 470px; width: 1000px">
+                    <div class="card-header" style='background-color: rgba(95, 114, 109, 0.533)' align="center">
+                        <h1>Hi User ! </h1>
+                        <h6>Please Enter The Details</h6>
+                    </div>
+                    <div class="card-body"  style='background-color: rgba(60, 165, 207, 0.34)'>
+                        <p><b> Enter The Current :</b></p>  <input type="any" step=any name="current" id="current" style='background-color: rgba(255, 255, 255, 0.2)' > <br><br>                        
+                        
+                        <p><b> Enter The Voltage :</b></p>
+                        <input type="number" step=any name="volt" id="volt" style='z-index: 1; left: 175px; top: 190px; position: absolute; height: 30px; width:190px ; background-color: rgba(255, 255, 255, 0.2)' >
+
+                        <p  style='z-index: 1; left: 500px; top: 140px; position: absolute; height: 30px; width:190px ; '><b>Enter the Temp:</b></p>
+                        <input type="number" step=any name="temp" id="temp"  style='z-index: 1; left: 680px; top: 138px; position: absolute; height: 30px; width:190px ; background-color: rgba(255, 255, 255, 0.2)' >
+<br><br>
+                        <p><b>Humidity :</b></p>
+                        <input type="number" step=any name="humidity" id="humidity" style='z-index: 1; left: 175px; top: 240px; position: absolute; height: 30px; width:190px ; background-color: rgba(255, 255, 255, 0.2)' >
+                        
+                        <label for="vibration"  style='z-index: 1; left: 500px; top: 190px; position: absolute; height: 30px; width:190px ; '><b>Vibration :</b></label>
+                        <select name="vibration" id="vibration" style='z-index: 1; left: 680px; top: 190px; position: absolute; height: 30px; width:190px ; background-color: rgba(255, 255, 255, 0.2)' >
+                        <option value='0'>No</option>
+                        <option value="1">Yes</option>
+                        </select><br><br>
+
+                        <button type="submit" style='z-index: 1; left: 455px; top: 350px; position: absolute; height: 30px; width:100px ; background-color: rgba(86, 152, 169, 0.827)'>Submit</button>
+
+                    </div>
+                    <py-script>
+                    </py-script>
+                    <div class="card-footer" style='background-color: rgba(95, 114, 109, 0.533)' align="center">
+                        <center>
+                            {% if name %}
+                             <p><B>
+                                Motor may have:</B> {{name}}
+                            </p>
+                            {% endif %}
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+  
+      
+</body>
+</html>
